@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1730104859471,
+    "title": "Food",
+    "amount": 100,
+    "type": "expense"
+  },
+  {
+    "id": 1730105113475,
+    "title": "some",
+    "amount": 1000,
+    "type": "income"
+  },
+  {
+    "id": 1730105261052,
+    "title": "evryr",
+    "amount": 233,
+    "type": "expense"
+  }
+]

@@ -1,0 +1,30 @@
+<!-- client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+        <input type="text" id="entryTitle" placeholder="Entry Title" required>
+        <input type="number" id="entryAmount" placeholder="Amount" required>
+        <select id="entryType">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button id="addEntryBtn">Add Entry</button>
+        <ul id="entryList"></ul>
+        <div id="summary">
+            <h2>Summary</h2>
+            <p>Total Income: $<span id="totalIncome">0</span></p>
+            <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+            <p>Balance: $<span id="balance">0</span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

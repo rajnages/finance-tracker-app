@@ -1,0 +1,197 @@
+/* client/styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center; /* Center the container vertically */
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners for a modern feel */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    position: relative; /* Allow absolute positioning of shapes */
+    overflow: hidden; /* Hide overflowing shapes */
+    animation: slideIn 0.5s ease-in-out; /* Animation on load */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* Dark gray for the title */
+    font-size: 2em; /* Decrease title size */
+    margin-bottom: 15px; /* Reduce space below the title */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+
+/* Add some shapes for visual interest */
+.shape {
+    position: absolute;
+    border-radius: 50%; /* Circle shape */
+    opacity: 0.3; /* Transparency for shapes */
+}
+
+.shape1 {
+    width: 120px;
+    height: 120px;
+    background: #ffdd57; /* Yellow */
+    top: -60px; /* Position above the container */
+    left: -60px; /* Position to the left */
+    animation: float 6s ease-in-out infinite; /* Floating animation */
+}
+
+.shape2 {
+    width: 160px;
+    height: 160px;
+    background: #ff6b6b; /* Red */
+    bottom: -80px; /* Position below the container */
+    right: -80px; /* Position to the right */
+    animation: float 4s ease-in-out infinite; /* Floating animation */
+}
+
+.shape3 {
+    width: 100px;
+    height: 100px;
+    background: #4caf50; /* Green */
+    top: 50%; /* Center vertically */
+    right: -50px; /* Position to the right */
+    transform: translateY(-50%); /* Center adjustment */
+    animation: float 5s ease-in-out infinite; /* Floating animation */
+}
+
+/* Input styles */
+input, select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Adequate padding for comfort */
+    margin: 10px 0;
+    border: 2px solid #ced4da; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1em; /* Consistent font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+input:focus, select:focus {
+    border-color: #007bff; /* Blue border when focused */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+    padding: 12px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em; /* Standard font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* List styles */
+ul {
+    list-style-type: none; /* No bullets */
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between; /* Space out the list items */
+    align-items: center;
+    padding: 15px;
+    margin: 5px 0;
+    background: rgba(240, 240, 240, 0.8); /* Light grey for list items */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+li span {
+    color: #495057; /* Darker gray for text */
+}
+
+li button {
+    background-color: #dc3545; /* Red for delete */
+}
+
+li button:hover {
+    background-color: #c82333; /* Darker red for delete on hover */
+}
+
+/* Summary styles */
+#summary {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for summary */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#summary h2 {
+    margin-bottom: 15px;
+    color: #007bff; /* Blue for summary titles */
+}
+
+#summary p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide from top */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Float up */
+    }
+    100% {
+        transform: translateY(0); /* Float down */
+    }
+}
+
+@keyframes fadeInEntry {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+li {
+    animation: fadeInEntry 0.5s ease forwards; /* Animation for entries */
+}
